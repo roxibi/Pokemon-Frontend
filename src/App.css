@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+#slider {
+  margin: 0 auto;
+}
+
 .headerSec ul,
 .headerSec h1 {
   margin-top: 0px;
