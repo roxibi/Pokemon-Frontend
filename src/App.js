@@ -3,13 +3,19 @@ import './App.css';
 import { useState, } from "react";
 import React from "react";
 import Cards from './Cards';
+import { Route, Routes } from 'react-router-dom';
+import DetailedCard from './DetailedCard';
 
 function App() {
   return (
-    <div className="App">
-<h1>PokeFight</h1>
-<div><Cards/></div>
-    </div>
+   
+<div>
+  <Routes>
+  <Route path="/" element={<Cards/>}/>
+  <Route path="/details" element={<DetailedCard/>}/>
+  </Routes>
+  </div>
+   
   );
 }
 
