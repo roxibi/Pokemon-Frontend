@@ -23,7 +23,7 @@ function Cards() {
       <ReactCardSlider slides={slides} />
       <br/>
 <RandomPokemon/>
-
+<RandomPokemon/>
 
   
      
