@@ -11,27 +11,28 @@ function Cards() {
     alert("hello world");
   }
   
- 
+ let image = (id) => {
+  if ( id < 10) {
+    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00{id}.png"
+  } else if (id < 100 ) {
+    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0{id}.png"
+  } else {
+    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{id}.png"
+  }
+ }
  
   const slides =
-    pokemons.map((pokemon) => ({ title: pokemon.name.english, description: pokemon.type.join(' | ') }));
+    pokemons.map((pokemon) => ({ image: pokemon.id, title: pokemon.name.english, description: pokemon.type.join(' | ') }));
 
 
   return (
-
     <>
       <ReactCardSlider slides={slides} />
       <br/>
-<RandomPokemon name=""/>
-<RandomPokemon name=""/>
-
-  
-     
+<RandomPokemon/>
+<RandomPokemon/>     
     </>
   );
 }
-
-
-
 
 export default Cards;
