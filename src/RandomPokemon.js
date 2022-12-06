@@ -1,25 +1,15 @@
 import Pokedata from "./pokedata.json";
-
+import Fight from "./Fight";
 import React, {useState} from 'react'
 
-function RandomPokemon() {
-    const pokemons = Pokedata;
-    const poki = pokemons[Math.floor(Math.random() * pokemons.length)];
-     const [randomPokemon, setRandomPokemon]=useState();
-  const onPress = () => {
- setRandomPokemon(poki.name.english);
-  };
-   
-   
+function RandomPokemon({pokemon, onPress}) {
 
-   
-     console.log(poki.name.english)
-    return (
-        <div>
-            <h1>Choose your opponentç</h1>
-<button onClick={onPress}>Random</button>
-<div>{poki.name.english}</div>
-        </div>
+
+  return (
+    <div>       
+        <button onClick={onPress}>Random</button>
+        <div>{pokemon?.name.english}</div>
+    </div>
     )
 }
 
