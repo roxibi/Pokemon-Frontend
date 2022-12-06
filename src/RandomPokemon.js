@@ -16,6 +16,7 @@ function RandomPokemon() {
      console.log(poki.name.english)
     return (
         <div>
+            <h1>Choose your opponentç</h1>
 <button onClick={onPress}>Random</button>
 <div>{poki.name.english}</div>
         </div>
