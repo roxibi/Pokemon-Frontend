@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-  background-image: url('../Images/game.jpg');
   background-position: center;
   height: 100vh;
   margin-top: 0;
@@ -9,6 +8,29 @@
 
 #slider {
   margin: 0 auto;
+  margin-left: 15%;
+}
+
+ul.chakra-wrap__list {
+  width: 60%;
+  padding-top: 20px;
+  margin: 0 auto;
+}
+
+svg.slider-icon {
+  visibility: hidden;
+}
+
+div.slider-card-image {
+  width: 70%;
+  background-size: auto;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.slider-card:hover,
+.slider-card-image:hover{
+  background-color: #61dafb;
 }
 
 .headerSec ul,
@@ -34,4 +56,47 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+@font-face {
+  font-family: "Pokemon";   /*Can be any text*/
+  src: local("Pokemon"),
+    url("./Fonts/PokemonSolid.ttf") format("truetype");
+}
+
+h1 {
+  color: #ffcc03;
+  padding-top: 20px;
+  text-shadow: 2px 2px 4px #2a75bb;
+  font-family: "Pokemon";
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  padding-left: 30%;
+  padding-top: 5%;
+}
+
+ul>a {
+  height: 10%;
+  font-size: 30px;
+}
+
+ul>a:hover {
+  background-color: #ffcc03;
+  color: black;
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "ARCADECLASSIC";   /*Can be any text*/
+  src: local("ARCADECLASSIC"),
+    url("./Fonts/ARCADECLASSIC.TTF") format("truetype");
+}
+
+.headerH1 {
+  display: block;
+  width: 100%;
 }

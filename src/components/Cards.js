@@ -24,8 +24,7 @@ function Cards() {
   return (
     <>
       <ReactCardSlider slides={slides} />
-      <br/>
-<RandomPokemon/>     
+      <br/>    
     </>
   );
 }

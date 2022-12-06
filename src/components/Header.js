@@ -3,8 +3,8 @@ import React from 'react'
 const Header = () => {
   return (
     <div className='headerSec'>
+      <h1 className='headerH1'>Welcome to PokeFight</h1>
         <ul>
-            <h1>Welcome to PokeFight</h1>
         <a>Home</a>
         <a>Pokemons</a>
         <a>FAQ</a>
