@@ -3,18 +3,12 @@ import Fight from "./Fight";
 import React, {useState} from 'react'
 
 function RandomPokemon({pokemon, onPress}) {
-    
-   
 
-   
-     console.log(pokemon.name.english)
-    return (
-        <div>
-          
-            
-<button onClick={onPress}>Random</button>
-<div>{pokemon.name.english}</div>
-        </div>
+  return (
+    <div>       
+        <button onClick={onPress}>Random</button>
+        <div>{pokemon?.name.english}</div>
+    </div>
     )
 }
 
