@@ -1,21 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
-import { useState, } from "react";
+import { useState } from "react";
 import React from "react";
-import Cards from './Cards';
-import { Route, Routes } from 'react-router-dom';
-import DetailedCard from './DetailedCard';
+import Cards from './components/Cards';
+import Header from './components/Header';
+import "./Fonts/PokemonSolid.ttf";
+import "./Fonts/ARCADECLASSIC.TTF";
+import TypeOptions from "./components/TypeOptions";
+import RandomPokemon from './RandomPokemon';
 
 function App() {
   return (
-   
-<div>
-  <Routes>
-    <Route path="/" element={<Cards/>}/>
-    <Route path="/details" element={<DetailedCard/>}/>
-  </Routes>
-  </div>
-   
+    <div className="App">
+      <Header />
+<h1>Choose your Pokemon</h1>
+<div><Cards/></div>
+<TypeOptions />
+<RandomPokemon/> 
+    </div>
   );
 }
 

@@ -13,7 +13,23 @@ function Cards() {
     setP1Pokemon(findPoke);
   }
 
+
+  
+ let image = (id) => {
+  if ( id < 10) {
+    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00{id}.png"
+  } else if (id < 100 ) {
+    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0{id}.png"
+  } else {
+    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{id}.png"
+  }
+ }
+
+  const slides =
+    pokemons.map((pokemon) => ({ image: pokemon.id, title: pokemon.name.english, description: pokemon.type.join(' | ') }));
+
   const slides = Pokedata.map((pokemon) => ({ title: pokemon.name.english, description: pokemon.type.join(' | '), clickEvent: sliderClick }));
+
 
   const onPress = () => {
     setP2Pokemon(Pokedata[Math.floor(Math.random() * Pokedata.length)]);
@@ -26,11 +42,11 @@ function Cards() {
       <ReactCardSlider slides={slides} />
       <br />
       <RandomPokemon pokemon={p2Pokemon} onPress={onPress}/>
+      <br/>
+<RandomPokemon/>
+<RandomPokemon/>     
     </>
   );
 }
-
-
-
 
 export default Cards;
