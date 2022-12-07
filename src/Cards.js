@@ -25,9 +25,6 @@ function Cards() {
   }
  }
 
-  const slides =
-    pokemons.map((pokemon) => ({ image: pokemon.id, title: pokemon.name.english, description: pokemon.type.join(' | ') }));
-
   const slides = Pokedata.map((pokemon) => ({ title: pokemon.name.english, description: pokemon.type.join(' | '), clickEvent: sliderClick }));
 
 
@@ -43,8 +40,7 @@ function Cards() {
       <br />
       <RandomPokemon pokemon={p2Pokemon} onPress={onPress}/>
       <br/>
-<RandomPokemon/>
-<RandomPokemon/>     
+     
     </>
   );
 }

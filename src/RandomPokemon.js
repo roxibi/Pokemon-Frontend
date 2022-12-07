@@ -8,7 +8,7 @@ function RandomPokemon({pokemon, onPress}) {
   return (
     <div>       
         <button onClick={onPress}>Random</button>
-        <div>{pokemon?.name.english}</div>
+        {/* <p>Computer:{pokemon?.name.english}</p> */}
     </div>
     )
 }
