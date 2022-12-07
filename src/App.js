@@ -15,7 +15,7 @@ function App() {
       <Header />
 <h1>Choose your Pokemon</h1>
 <Cards/>
-<TypeOptions />
+{/* <TypeOptions /> */}
 
     </div>
   );

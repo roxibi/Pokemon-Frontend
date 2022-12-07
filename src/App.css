@@ -18,7 +18,7 @@ ul.chakra-wrap__list {
 }
 
 svg.slider-icon {
-  visibility: hidden;
+  margin-left: 15%;
 }
 
 div.slider-card-image {
@@ -28,8 +28,12 @@ div.slider-card-image {
   margin: 0 auto;
 }
 
-.slider-card:hover,
-.slider-card-image:hover{
+.slider-card:hover 
+{
+  background-color: #61dafb;
+}
+.slider-card:hover div
+{
   background-color: #61dafb;
 }
 

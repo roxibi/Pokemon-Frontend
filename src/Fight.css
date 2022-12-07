@@ -1,5 +1,10 @@
 .fight-container {
     display: flex;
     justify-content: space-evenly;
-    margin: 1rem;
+   
+}
+
+h1 {
+    margin:0;
+    padding: 0;
 }

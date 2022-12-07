@@ -1,10 +1,12 @@
 import React from 'react'
 import './Fight.css'
 
+
 function Fight({ p1Pokemon, p2Pokemon }) {
   return (
     <div className='fight-container'>
       <div>
+        {/* <h1> <Result p1Pokemon={ p1Pokemon} p2Pokemon={ p2Pokemon}/></h1> */}
         <h1>Player 1</h1>
         {p1Pokemon &&
           <>
@@ -25,6 +27,7 @@ function Fight({ p1Pokemon, p2Pokemon }) {
             <p>Attack: {p2Pokemon.base.Attack}</p>
             <p>Defense: {p2Pokemon.base.Defense}</p>
             <p>Type: {p2Pokemon.type[0]}</p>
+           
           </>
         }
       </div>
