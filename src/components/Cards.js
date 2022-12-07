@@ -14,17 +14,16 @@ function Cards() {
   }
 
 
-  
- let image = (id) => {
  
-  if ( id < 10) {
-    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00{id}.png"
-  } else if (id < 100 ) {
-    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0{id}.png"
-  } else {
-    let image = "https://assets.pokemon.com/assets/cms2/img/pokedex/detail/{id}.png"
+  const image = (id) => {
+    if (id < 10) {
+      return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/00${id}.png`
+    } else if(id === 10 || id < 100) {
+      return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/0${id}.png`
+    }else {
+      return `https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`
+    }
   }
- }
 
   const slides = Pokedata.map((pokemon) => ({image: image(pokemon.id), title: pokemon.name.english, description: pokemon.type.join(' | '), clickEvent: sliderClick }));
 
