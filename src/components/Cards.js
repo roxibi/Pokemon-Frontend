@@ -3,11 +3,15 @@ import Pokedata from "../pokedata.json";
 import Fight from "../Fight";
 import ReactCardSlider from 'react-card-slider-component';
 import RandomPokemon from '../RandomPokemon'
-import Result from './Result';
+
+
 
 function Cards() {
   const [p1Pokemon, setP1Pokemon] = useState();
   const [p2Pokemon, setP2Pokemon] = useState();
+  const [pokemonName, setPokemonName] = useState('');
+
+
 
   function sliderClick() {
     const findPoke = Pokedata.find(pokemon => pokemon.name.english === this.title)
@@ -26,7 +30,14 @@ function Cards() {
     }
   }
 
-  const slides = Pokedata.map((pokemon) => ({ image: image(pokemon.id), title: pokemon.name.english, description: pokemon.type.join(' | '), clickEvent: sliderClick }));
+  const slides = Pokedata.filter((val) => {
+    if (pokemonName === '') { return true }
+    else if (val.name.english.toLowerCase().includes(pokemonName.toLowerCase()))  {
+       
+        return true
+    } 
+    else {return false}
+}).map((pokemon) => ({ image: image(pokemon.id), title: pokemon.name.english, description: pokemon.type.join(' | '), clickEvent: sliderClick }));
 
 
   const onPress = () => {
@@ -35,9 +46,13 @@ function Cards() {
 
   return (
     <>
-      {console.log(p1Pokemon)}
+    
+      <input type='text' onChange={(e) => { setPokemonName(e.target.value) }}></input>
+          {/* <button onClick={searchPokemon}>Search</button> */}
+          <div></div>
+      <br/>
       <RandomPokemon pokemon={p2Pokemon} onPress={onPress} />
-      <Result p1Pokemon={p1Pokemon} p2Pokemon={p2Pokemon}/>
+      {/* <Result p1Pokemon={p1Pokemon} p2Pokemon={p2Pokemon}/> */}
       <Fight p1Pokemon={p1Pokemon} p2Pokemon={p2Pokemon} />
       <ReactCardSlider slides={slides} />
       <br />
